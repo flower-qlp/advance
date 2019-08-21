@@ -18,4 +18,12 @@ public class BaseController {
         return new ResponseDto(code, msg, data);
     }
 
+    public ResponseDto buildResponse200(String msg, Object data) {
+        return new ResponseDto(CODE_CONNECT_SUCCESS, msg, data);
+    }
+
+    public ResponseDto buildResponse10000(String msg, Object data) {
+        return new ResponseDto(CODE_RESULT_SUCCESS, msg, data);
+    }
+
 }

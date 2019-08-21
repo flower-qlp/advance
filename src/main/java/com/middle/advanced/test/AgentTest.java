@@ -20,7 +20,9 @@ import java.lang.reflect.Proxy;
 public class AgentTest {
 
     public static void main(String[] args) {
-
+        /**
+         * jdk动态代理只能代理接口
+         * **/
         JDKInner();
     }
 

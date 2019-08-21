@@ -5,6 +5,7 @@ import com.middle.advanced.common.Agent;
 import com.middle.advanced.common.AgentHandler;
 import com.middle.advanced.service.ProductService;
 import com.middle.advanced.service.ProductServiceImpl;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@Api(value = "/",tags = "Product")
 public class ProductController {
 
     @Autowired

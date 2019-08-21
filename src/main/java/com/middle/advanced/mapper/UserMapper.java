@@ -10,8 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper extends JpaRepository<TUser, Integer> {
 
-    @Query("select a from TUser a where id=:id")
-    TUser findUserById(@Param("id") Long id);
-
+    TUser findByUserName(String userName);
 
 }

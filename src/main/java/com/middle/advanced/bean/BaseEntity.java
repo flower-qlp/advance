@@ -1,6 +1,8 @@
 package com.middle.advanced.bean;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,17 +12,20 @@ import java.util.Date;
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "enable")
+    @Column(name = "enable",nullable = false)
     private boolean enable;
 
     @Column(name = "create_time")
+    @CreationTimestamp
     private Date createTime;
 
     @Column(name = "update_time")
+    @UpdateTimestamp
     private Date updateTime;
 
     @Column(name = "create_by")
