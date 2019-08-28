@@ -17,8 +17,8 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "enable",nullable = false)
-    private boolean enable;
+    @Column(name = "enable", columnDefinition = "tinyint(1) default 1",insertable = false)
+    private Boolean enable;
 
     @Column(name = "create_time")
     @CreationTimestamp

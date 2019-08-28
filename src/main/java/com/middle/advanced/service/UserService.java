@@ -34,7 +34,7 @@ public class UserService {
     }
 
     public TUser selectUserById(Long id) {
-        return userMapper.getOne(id.intValue());
+        return userMapper.getOne(id);
     }
 
     public String login(LoginDto login) {

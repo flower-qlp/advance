@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserMapper extends JpaRepository<TUser, Integer> {
+public interface UserMapper extends JpaRepository<TUser, Long> {
 
     TUser findByUserName(String userName);
 

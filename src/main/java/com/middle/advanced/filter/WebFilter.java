@@ -3,6 +3,7 @@ package com.middle.advanced.filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class WebFilter implements Filter {
@@ -18,6 +19,15 @@ public class WebFilter implements Filter {
                          FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         request.setAttribute("cpath", request.getServletContext().getContextPath());
+
+        HttpServletResponse response = (HttpServletResponse) servletResponse;
+        response.addHeader("Access-Control-Allow-Origin", "*");
+
+        if (request.getHeader("Access-Control-Request-Method") != null && "OPTIONS".equals(request.getMethod())) {
+            // CORS "pre-flight" request
+            response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+            response.addHeader("Access-Control-Allow-Headers", "Content-Type");
+        }
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
