@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableJpaRepositories
 @EnableSwagger2
 @EnableCaching
-@ComponentScan(basePackages = {"com.middle.advanced.common"})
+@ComponentScan(basePackages = {"com.middle.advanced"})
 public class AdvancedApplication {
 
     public AdvancedApplication() {
