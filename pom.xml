@@ -126,6 +126,11 @@
                 <version>0.4.8</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
         <!-- rabbitmq相关依赖 -->
         <!--<dependency>-->
             <!--<groupId>com.rabbitmq</groupId>-->

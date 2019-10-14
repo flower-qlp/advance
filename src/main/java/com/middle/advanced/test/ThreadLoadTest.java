@@ -13,9 +13,17 @@ public class ThreadLoadTest {
         protected Object initialValue() {
 
             System.out.println(Thread.currentThread().getName() + " 调用get方法时，当前线程共享变量没有设置，调用initialValue获取默认值！");
+
             return null;
         }
     };
+
+    public class myThread extends Thread{
+        @Override
+        public void run() {
+            super.run();
+        }
+    }
 
     public static class MyTask1 implements Runnable {
 

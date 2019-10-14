@@ -1,9 +1,9 @@
 package com.middle.advanced.test;
 
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.middle.advanced.bean.Product;
+
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class test {
@@ -12,9 +12,25 @@ public class test {
     List<String> copyList = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) {
-        new threadTwo().run();
-        new threadOne().run();
+//        new threadTwo().run();
+//        new threadOne().run();
+
+        Map<String,String> parentMap=new HashMap<>();
+        parentMap.put("key1","value1");
+        parentMap.put("key2","values2");
+        Set<Map.Entry<String,String>> entries=parentMap.entrySet();
+        Iterator<Map.Entry<String,String>> iterators=entries.iterator();
+        while(iterators.hasNext()){
+            Map.Entry<String,String> object=iterators.next();
+            String key=object.getKey();
+            String value=object.getValue();
+            System.out.println(key+value);
+        }
+
+
     }
+
+
 
     private static class threadOne extends Thread {
         @Override
