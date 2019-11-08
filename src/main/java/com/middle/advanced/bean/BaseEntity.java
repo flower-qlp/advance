@@ -12,7 +12,7 @@ import java.util.Date;
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
-
+    private static final long serialVersionUID = 258764413037161283L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
