@@ -1,8 +1,8 @@
 package com.middle.advanced.controller;
 
 import com.middle.advanced.bean.Product;
-import com.middle.advanced.common.Agent;
-import com.middle.advanced.common.AgentHandler;
+import com.middle.advanced.common.agent.Agent;
+import com.middle.advanced.common.agent.AgentHandler;
 import com.middle.advanced.service.ProductService;
 import com.middle.advanced.service.ProductServiceImpl;
 import io.swagger.annotations.Api;

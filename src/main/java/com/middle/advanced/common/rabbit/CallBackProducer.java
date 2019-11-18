@@ -1,4 +1,4 @@
-package com.middle.advanced.common;
+package com.middle.advanced.common.rabbit;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.amqp.core.Message;

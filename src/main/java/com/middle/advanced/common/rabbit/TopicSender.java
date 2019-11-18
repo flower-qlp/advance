@@ -1,6 +1,5 @@
 package com.middle.advanced.common.rabbit;
 
-import com.middle.advanced.common.CallBackProducer;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

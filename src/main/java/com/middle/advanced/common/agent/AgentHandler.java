@@ -1,4 +1,4 @@
-package com.middle.advanced.common;
+package com.middle.advanced.common.agent;
 
 import com.middle.advanced.service.ProductService;
 

@@ -1,7 +1,7 @@
 package com.middle.advanced.test;
 
-import com.middle.advanced.common.CGLibAgent;
-import com.middle.advanced.common.JDKDynamicAgent;
+import com.middle.advanced.common.agent.CGLibAgent;
+import com.middle.advanced.common.agent.JDKDynamicAgent;
 import com.middle.advanced.filter.CGLibFilter;
 import com.middle.advanced.service.ProductService;
 import com.middle.advanced.service.ProductServiceImpl;
