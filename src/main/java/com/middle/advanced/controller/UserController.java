@@ -6,6 +6,7 @@ import com.middle.advanced.bean.TUserInfo;
 import com.middle.advanced.dto.LoginDto;
 import com.middle.advanced.dto.ResponseDto;
 import com.middle.advanced.service.UserService;
+import com.middle.advanced.utils.annotation.VerificationByToken;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -48,6 +49,7 @@ public class UserController extends BaseController {
 
     @ApiOperation(value = "登陆系统")
     @PostMapping(value = "/user/login")
+    @VerificationByToken()
     public ResponseDto userLogin(@RequestBody LoginDto loginDto) {
         String message = userService.login(loginDto);
         if (StringUtils.isEmpty(message)) {

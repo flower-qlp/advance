@@ -7,12 +7,12 @@ import java.lang.annotation.Target;
 
 /**
  * @author happy
- * 测试
+ * 切面 验证token
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface NeedTest {
+public @interface VerificationByToken {
 
-    boolean value() default false;
+    String access_token() default "";
 
 }
