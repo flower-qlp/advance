@@ -12,7 +12,9 @@ import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author itoutsource.cz10
@@ -32,6 +34,14 @@ public class UserService {
 
     public void createUserInfo(TUserInfo userInfo) {
         userInfoMapper.saveAndFlush(userInfo);
+    }
+
+    public List<String> userCodeFindAll() {
+        return this.userFindAll().parallelStream().map(x -> x.getUserCode()).collect(Collectors.toList());
+    }
+
+    public List<TUser> userFindAll() {
+        return userMapper.findAll();
     }
 
     public TUser selectUserById(Long id) {

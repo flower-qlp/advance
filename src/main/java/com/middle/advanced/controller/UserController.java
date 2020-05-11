@@ -74,4 +74,19 @@ public class UserController extends BaseController {
         userService.createUserInfo(userInfo);
         return buildSuccessResponse();
     }
+
+    @ApiOperation(value = "获取所有用户信息")
+    @GetMapping(value = "/user/findAll")
+    public ResponseDto findAllUser(
+    ) {
+        return buildResponse10000("", userService.userFindAll());
+    }
+
+    @ApiOperation(value = "获取所有用户")
+    @GetMapping(value = "/user-code/findAll")
+    public ResponseDto findAllUserCode(
+    ) {
+        return buildResponse10000("", userService.userCodeFindAll());
+    }
+
 }
