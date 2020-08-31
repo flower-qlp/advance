@@ -2,6 +2,10 @@ package com.middle.advanced.common.model;
 
 
 import com.alibaba.fastjson.JSON;
+import com.middle.advanced.common.model.adapter.classadapter.Mobile;
+import com.middle.advanced.common.model.adapter.classadapter.Volteage220;
+import com.middle.advanced.common.model.adapter.classadapter.VolteageAdapter;
+import com.middle.advanced.common.model.adapter.objectadapter.VolteageAdapter2;
 import com.middle.advanced.common.model.decorate.Bread;
 import com.middle.advanced.common.model.decorate.Cream;
 import com.middle.advanced.common.model.decorate.Food;
@@ -28,8 +32,13 @@ public class ModelTest {
 
         //装饰者
         //一个涂了奶油的面包 通过组装得到想要的类
-        Food food = new Bread(new Cream(new Food("奶油蛋糕=")));
-        System.out.println(food.make());
+//        Food food = new Bread(new Cream(new Food("奶油蛋糕=")));
+//        System.out.println(food.make());
+        //类适配器
+//        Mobile mobile = new Mobile();
+//        mobile.charging(new VolteageAdapter());
 
+        Mobile mobile = new Mobile();
+        mobile.charging(new VolteageAdapter2(new Volteage220()));
     }
 }
