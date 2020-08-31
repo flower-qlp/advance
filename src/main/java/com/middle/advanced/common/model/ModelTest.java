@@ -11,6 +11,10 @@ import com.middle.advanced.common.model.decorate.Cream;
 import com.middle.advanced.common.model.decorate.Food;
 import com.middle.advanced.common.model.factory.simpleFactory.Car;
 import com.middle.advanced.common.model.factory.simpleFactory.SimpleFactory;
+import com.middle.advanced.common.model.generator.Computer;
+import com.middle.advanced.common.model.generator.ComputerBuilder;
+import com.middle.advanced.common.model.generator.Director;
+import com.middle.advanced.common.model.generator.HPComputerBuilder;
 import com.middle.advanced.common.model.observer.Person;
 import com.middle.advanced.common.model.observer.XiaoLi;
 import com.middle.advanced.common.model.observer.XiaoMei;
@@ -43,14 +47,21 @@ public class ModelTest {
 //        Mobile mobile = new Mobile();
 //        mobile.charging(new VolteageAdapter2(new Volteage220()));
 
-        Car c = SimpleFactory.getCarInstance("Benz");
-        if (c != null) {
-            c.run();
-            c.stop();
-        } else {
-            System.out.println("造不了这种汽车。。。");
-        }
+        //工厂类
+//        Car c = SimpleFactory.getCarInstance("Benz");
+//        if (c != null) {
+//            c.run();
+//            c.stop();
+//        } else {
+//            System.out.println("造不了这种汽车。。。");
+//        }
 
+        //生成器
+        Director director = new Director();
+        director.setComputerBuilder(new HPComputerBuilder());
+        director.constructComputer();
+        Computer computer = director.getComputer();
+        System.out.println(JSON.toJSONString(computer));
     }
 
 }
