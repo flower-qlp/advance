@@ -4,7 +4,7 @@ package com.middle.advanced.test;
  * threadLoad 保存线程中的变量
  * 每个线程单独自己的变量,无法错作其他线程中的变量
  *
- * @author itoutsource.cz10
+ * @author
  */
 public class ThreadLoadTest {
 

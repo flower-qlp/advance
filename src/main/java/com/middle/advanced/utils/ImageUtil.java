@@ -10,12 +10,10 @@ import java.awt.image.ColorModel;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
-import java.nio.file.OpenOption;
-import java.util.Optional;
+
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 public class ImageUtil {
     private static String picPath = "http://attachmentgw.trinasolar.com/fs/cn/5c500f3fac2dd1000f7f5b0b/20190328/9CE9306784204A57ACFA8857784CA644.jpg";

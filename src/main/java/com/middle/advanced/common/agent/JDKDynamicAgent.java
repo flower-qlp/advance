@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * jdk动态代理
  */
 public class JDKDynamicAgent implements InvocationHandler {

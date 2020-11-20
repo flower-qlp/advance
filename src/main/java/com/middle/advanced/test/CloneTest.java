@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * test with class clone
  */
 @RunWith(SpringRunner.class)

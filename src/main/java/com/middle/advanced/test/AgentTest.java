@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 public class AgentTest {
 

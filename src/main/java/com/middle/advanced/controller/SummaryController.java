@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 @RestController
 @Api(value = "/", tags = "page")

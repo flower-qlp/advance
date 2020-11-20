@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 @Data
 public class SummartTreeList extends ParentSummaryList implements Serializable{

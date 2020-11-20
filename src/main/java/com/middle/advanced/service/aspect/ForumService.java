@@ -3,7 +3,7 @@ package com.middle.advanced.service.aspect;
 import com.middle.advanced.utils.annotation.NeedTest;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * 关于AOP切面 注解的新增与使用
  */
 public class ForumService {

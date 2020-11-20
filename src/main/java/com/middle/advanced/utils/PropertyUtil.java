@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * java8.0和spring boot4.0增加对重复注解的支持
  */
 @PropertySource("classpath:/mime.properties")

@@ -6,7 +6,7 @@ import com.middle.advanced.service.aspect.NaiveWater;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * aspect定义切面测试
  */
 public class AspectTest {

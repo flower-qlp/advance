@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * @author itoutsource.cz10
+ * @author
  * 动态代理
  */
 public class AgentHandler implements InvocationHandler {

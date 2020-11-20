@@ -1,7 +1,7 @@
 package com.middle.advanced.service;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 public class AdvanceImpl implements Advance {
     @Override

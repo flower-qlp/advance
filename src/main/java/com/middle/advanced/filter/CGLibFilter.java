@@ -5,7 +5,7 @@ import org.springframework.cglib.proxy.CallbackFilter;
 import java.lang.reflect.Method;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 public class CGLibFilter implements CallbackFilter {
     @Override

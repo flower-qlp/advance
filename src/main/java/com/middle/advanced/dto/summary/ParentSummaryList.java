@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 菜单树
  *
- * @author itoutsource.cz10
+ * @author
  */
 @Data
 public class ParentSummaryList implements Serializable {

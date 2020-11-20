@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 /**
- * @author itoutsource.cz10
+ * @author
  */
 @Component
 public class TopicSender {
