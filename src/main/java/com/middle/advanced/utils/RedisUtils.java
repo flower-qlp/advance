@@ -1,5 +1,6 @@
 package com.middle.advanced.utils;
 
+import javafx.beans.binding.ObjectExpression;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -76,6 +77,10 @@ public class RedisUtils {
         return key == null ? null : redisTemplate.opsForValue().get(key);
     }
 
+    public List<Object> getMulti(List<String> keys) {
+        return redisTemplate.opsForValue().multiGet(keys);
+    }
+
 
     /**
      * 普通缓存存入
@@ -86,6 +91,16 @@ public class RedisUtils {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
+        }
+    }
+
+    //批量插入
+    public boolean setMany(Map<String, Object> maps) {
+        try {
+            redisTemplate.opsForValue().multiSet(maps);
+            return true;
+        } catch (Exception e) {
             return false;
         }
     }
@@ -113,6 +128,7 @@ public class RedisUtils {
 
     /**
      * 递减
+     *
      * @param key   键
      * @param delta 要减少几(小于0)
      * @return
@@ -127,6 +143,7 @@ public class RedisUtils {
 
     /**
      * HashGet
+     *
      * @param key  键 不能为null
      * @param item 项 不能为null
      * @return 值
@@ -135,8 +152,19 @@ public class RedisUtils {
         return redisTemplate.opsForHash().get(key, item);
     }
 
+    public boolean hashSet(String key, String mapKey, Object value) {
+        try {
+            redisTemplate.opsForHash().put(key, mapKey, value);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+
+    }
+
     /**
      * 获取hashKey对应的所有键值
+     *
      * @param key 键
      * @return 对应的多个键值
      */
@@ -146,6 +174,7 @@ public class RedisUtils {
 
     /**
      * HashSet
+     *
      * @param key 键
      * @param map 对应多个键值
      * @return true 成功 false 失败
