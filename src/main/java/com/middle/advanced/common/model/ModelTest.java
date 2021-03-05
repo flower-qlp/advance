@@ -20,6 +20,7 @@ import com.middle.advanced.common.model.observer.Person;
 import com.middle.advanced.common.model.observer.XiaoLi;
 import com.middle.advanced.common.model.observer.XiaoMei;
 import com.middle.advanced.common.model.observer.XiaoWang;
+import com.middle.advanced.common.model.singleton.DoubleSingleton;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.springframework.beans.BeanUtils;
 
@@ -30,7 +31,9 @@ import org.springframework.beans.BeanUtils;
  */
 public class ModelTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+
         //观察者模式小例子
 //        Person xiaoWang = new XiaoWang();
 //        Person xiaoLi = new XiaoLi();
@@ -50,14 +53,6 @@ public class ModelTest {
 //        Mobile mobile = new Mobile();
 //        mobile.charging(new VolteageAdapter2(new Volteage220()));
 
-        //工厂类
-//        Car c = SimpleFactory.getCarInstance("Benz");
-//        if (c != null) {
-//            c.run();
-//            c.stop();
-//        } else {
-//            System.out.println("造不了这种汽车。。。");
-//        }
 
         //生成器
 //        Director director = new Director();
@@ -66,18 +61,6 @@ public class ModelTest {
 //        Computer computer = director.getComputer();
 //        System.out.println(JSON.toJSONString(computer));
 
-        //原型模式
-        PersonClone p = new PersonClone();
-        p.setName("good");
-        System.out.println(System.currentTimeMillis());
-        for (int i = 0; i < 10000; i++) {
-            PersonClone cloneP = (PersonClone) p.clone();
-//          PersonClone cloneP = new PersonClone();
-//          BeanUtils.copyProperties(p, cloneP);
-            cloneP.setName(cloneP.getName() + i);
-            cloneP.show();
-        }
-        System.out.println(System.currentTimeMillis());
     }
 
 

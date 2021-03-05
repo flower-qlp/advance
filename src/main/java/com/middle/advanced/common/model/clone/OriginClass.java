@@ -1,5 +1,8 @@
 package com.middle.advanced.common.model.clone;
 
+/**
+ * 基于内存二进制的复制
+ **/
 public class OriginClass implements Cloneable {
 
     @Override
@@ -12,4 +15,10 @@ public class OriginClass implements Cloneable {
         }
         return originClass;
     }
+
+
+//    @Override
+//    protected Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
 }

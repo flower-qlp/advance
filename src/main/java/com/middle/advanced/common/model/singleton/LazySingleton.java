@@ -2,7 +2,7 @@ package com.middle.advanced.common.model.singleton;
 
 /**
  * 懒汉模式
- * 线程不安全
+ * 线程不安全(不推荐)
  * @author happy
  *
  * */

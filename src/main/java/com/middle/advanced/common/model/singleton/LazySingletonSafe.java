@@ -4,7 +4,7 @@ package com.middle.advanced.common.model.singleton;
 /**
  * 懒汉模式
  * 线程安全
- * synchronized 修饰创建对象方法
+ * synchronized 修饰创建对象方法(不推荐)
  * @author happy
  */
 public class LazySingletonSafe {

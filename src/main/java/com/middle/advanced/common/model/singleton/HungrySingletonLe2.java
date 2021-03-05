@@ -3,6 +3,8 @@ package com.middle.advanced.common.model.singleton;
 /**
  * @author happy
  * 静态内部类
+ * 静态内部类方式是懒加载的
+ * 线程安全
  */
 public class HungrySingletonLe2 {
 
