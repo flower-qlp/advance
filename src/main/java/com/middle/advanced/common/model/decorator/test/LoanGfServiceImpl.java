@@ -9,6 +9,11 @@ import java.util.List;
  * @author happy
  */
 public class LoanGfServiceImpl implements loanService {
+
+    public LoanGfServiceImpl() {
+        System.out.println("创建类");
+    }
+
     @Override
     public List<Integer> findList() {
         return Arrays.asList(1, 2, 3, 4, 5, 6);
