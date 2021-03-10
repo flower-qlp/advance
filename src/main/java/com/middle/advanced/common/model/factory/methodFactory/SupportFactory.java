@@ -1,6 +1,5 @@
 package com.middle.advanced.common.model.factory.methodFactory;
 
-import com.middle.advanced.common.model.singleton.RoleSingleton;
 
 import java.util.Arrays;
 

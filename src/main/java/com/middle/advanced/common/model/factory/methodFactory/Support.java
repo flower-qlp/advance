@@ -1,6 +1,11 @@
 package com.middle.advanced.common.model.factory.methodFactory;
 
+import lombok.Data;
+
+@Data
 public class Support extends AbstractUser {
+
+    private String className="ccc";
 
     public Support() {
         super();
@@ -11,6 +16,6 @@ public class Support extends AbstractUser {
     }
 
     public void show() {
-        System.out.println("支持审批！");
+        System.out.println(this.className + "支持审批！");
     }
 }
